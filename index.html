@@ -4,24 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        #menu-checkbox {
+            display: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        /* Introduction */
+        #introduction {
+            background: #ecf0f1;
+        }
+
+        .intro-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            flex-shrink: 0;
+        }
+
+        .profile-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+        }
+
+        .intro-info {
+            flex: 1;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Education */
+        .education-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .education-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .education-item .year {
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+
+        /* Hobbies */
+        #hobbies {
+            background: #ecf0f1;
+        }
+
+        .hobbies-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .hobby-item {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .hobby-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+        }
+
+        .contact-item strong {
+            display: inline-block;
+            width: 100px;
+            color: #2c3e50;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .intro-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hobbies-list {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 28px;
+                cursor: pointer;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                padding: 20px;
+                text-align: left;
+            }
+
+            #menu-checkbox:checked ~ nav ul {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Header -->
     <header>
         <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#introduction">Home</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <div class="logo">AR</div>
+                <input type="checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="menu-toggle">☰</label>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="#introduction">Home</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <section id="introduction">
+  <section id="introduction">
         <div class="container">
             <div class="intro-content">
                 <div class="profile-photo">
