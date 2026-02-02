@@ -1,0 +1,172 @@
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+     
+        section {
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        
+        #introduction {
+            background: #ecf0f1;
+        }
+
+        .intro-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            flex-shrink: 0;
+        }
+
+        .profile-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+        }
+
+        .intro-info {
+            flex: 1;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+     
+        .education-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .education-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .education-item .year {
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+
+       
+        #hobbies {
+            background: #ecf0f1;
+        }
+
+        .hobbies-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .hobby-item {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .hobby-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+        }
+
+        .contact-item strong {
+            display: inline-block;
+            width: 100px;
+            color: #2c3e50;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+       
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+
+        @media (max-width: 600px) {
+            .intro-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hobbies-list {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
