@@ -1,4 +1,5 @@
-   * {
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -16,11 +17,32 @@
             padding: 0 20px;
         }
 
-        
+        /* Header */
         header {
             background: #2c3e50;
             color: white;
             padding: 20px 0;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        #menu-checkbox {
+            display: none;
         }
 
         nav ul {
@@ -34,7 +56,7 @@
             text-decoration: none;
         }
 
-     
+        /* Sections */
         section {
             padding: 50px 0;
         }
@@ -52,7 +74,7 @@
             padding-bottom: 10px;
         }
 
-        
+        /* Introduction */
         #introduction {
             background: #ecf0f1;
         }
@@ -84,7 +106,7 @@
             margin-top: 20px;
         }
 
-     
+        /* Education */
         .education-item {
             background: white;
             padding: 20px;
@@ -102,7 +124,7 @@
             font-weight: bold;
         }
 
-       
+        /* Hobbies */
         #hobbies {
             background: #ecf0f1;
         }
@@ -124,7 +146,7 @@
             margin-bottom: 10px;
         }
 
-        
+        /* Contact */
         .contact-info {
             background: white;
             padding: 30px;
@@ -146,7 +168,7 @@
             text-decoration: none;
         }
 
-       
+        /* Footer */
         footer {
             background: #2c3e50;
             color: white;
@@ -154,8 +176,8 @@
             padding: 20px 0;
         }
 
-
-        @media (max-width: 600px) {
+        /* Responsive */
+        @media (max-width: 768px) {
             .intro-content {
                 flex-direction: column;
                 text-align: center;
@@ -165,8 +187,30 @@
                 grid-template-columns: 1fr;
             }
 
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 28px;
+                cursor: pointer;
+            }
+
             nav ul {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                padding: 20px;
+                text-align: left;
+            }
+
+            #menu-checkbox:checked ~ nav ul {
+                display: flex;
             }
         }
+    
